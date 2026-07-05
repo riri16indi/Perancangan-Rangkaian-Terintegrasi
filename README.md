@@ -12,6 +12,3 @@ schematic/
 
 layout/
     Berisi layout Magic dan hasil ekstraksi.
-
-simulation/
-    Berisi hasil simulasi AC, gain, dan phase.
