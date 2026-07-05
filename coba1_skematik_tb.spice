@@ -1,0 +1,55 @@
+** sch_path: /foss/designs/kelompok4/coba1_skematik_tb.sch
+**.subckt coba1_skematik_tb
+VDD net2 0 dc 1.8
+VPLUS VPLUS 0 dc 0.9 ac 1
+VMINUS net1 0 dc 0.9
+IDC net2 net3 30u
+C1 VOUT 0 1p
+x1 net2 VOUT VPLUS net1 net3 0 coba1_skematik
+**** begin user architecture code
+
+
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.ac dec 20 1 100Meg
+.save all
+.control
+run
+let open_loop_gain = v(VOUT)/v(VPLUS)
+plot db(open_loop_gain) xlog
+plot ph(open_loop_gain) xlog
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/kelompok4/coba1_skematik.sym # of pins=6
+** sym_path: /foss/designs/kelompok4/coba1_skematik.sym
+** sch_path: /foss/designs/kelompok4/coba1_skematik.sch
+.subckt coba1_skematik VDD VOUT VPLUS VMINUS IDC VSS
+*.ipin VPLUS
+*.ipin VMINUS
+*.ipin IDC
+*.opin VOUT
+*.iopin VDD
+*.iopin VSS
+XM1 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=15 nf=3 ad=2.9 as=2.9 pd=21.16 ps=21.16 nrd=0.0193333333333333
++ nrs=0.0193333333333333 sa=0 sb=0 sd=0 mult=1
+XM2 net2 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=15 nf=3 ad=2.9 as=2.9 pd=21.16 ps=21.16 nrd=0.0193333333333333
++ nrs=0.0193333333333333 sa=0 sb=0 sd=0 mult=1
+XM3 net1 VMINUS net3 VSS sky130_fd_pr__nfet_01v8 L=1 W=30 nf=6 ad=4.35 as=5.8 pd=31.74 ps=42.32 nrd=0.00966666666666667
++ nrs=0.00966666666666667 sa=0 sb=0 sd=0 mult=1
+XM4 net2 VPLUS net3 VSS sky130_fd_pr__nfet_01v8 L=1 W=30 nf=6 ad=4.35 as=5.8 pd=31.74 ps=42.32 nrd=0.00966666666666667
++ nrs=0.00966666666666667 sa=0 sb=0 sd=0 mult=1
+XM5 net3 IDC VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.5 nf=1 ad=1.305 as=1.305 pd=9.58 ps=9.58 nrd=0.0644444444444444
++ nrs=0.0644444444444444 sa=0 sb=0 sd=0 mult=1
+XM6 IDC IDC VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.5 nf=1 ad=1.305 as=1.305 pd=9.58 ps=9.58 nrd=0.0644444444444444
++ nrs=0.0644444444444444 sa=0 sb=0 sd=0 mult=1
+XM7 VOUT net2 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=30 nf=6 ad=4.35 as=5.8 pd=31.74 ps=42.32 nrd=0.00966666666666667
++ nrs=0.00966666666666667 sa=0 sb=0 sd=0 mult=1
+XM8 VOUT IDC VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.5 nf=1 ad=1.305 as=1.305 pd=9.58 ps=9.58 nrd=0.0644444444444444
++ nrs=0.0644444444444444 sa=0 sb=0 sd=0 mult=1
+C1 net2 VOUT 1p
+.ends
+
+.end

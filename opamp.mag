@@ -1,0 +1,104 @@
+magic
+tech sky130A
+timestamp 1783274113
+<< nwell >>
+rect 2348 1100 2929 1123
+rect 150 600 800 1100
+rect 1750 852 2929 1100
+rect 1750 600 2400 852
+rect 3500 600 4200 1100
+<< nmos >>
+rect 1860 77 3242 441
+<< pmos >>
+rect 1774 673 2378 1021
+<< pmosmvt >>
+rect 171 672 774 1023
+rect 3521 667 4177 1029
+<< poly >>
+rect 450 1037 500 1050
+rect 152 1023 791 1037
+rect 152 672 171 1023
+rect 774 672 791 1023
+rect 152 644 791 672
+rect 1741 1021 2404 1054
+rect 3800 1044 3850 1050
+rect 1741 673 1774 1021
+rect 2378 673 2404 1021
+rect 1741 643 2404 673
+rect 3505 1029 4193 1044
+rect 3505 667 3521 1029
+rect 4177 667 4193 1029
+rect 3505 651 4193 667
+rect 3800 650 3850 651
+<< ndiffres >>
+rect -25 -28 181 128
+rect 1783 52 1860 457
+<< pdiffres >>
+rect 1769 457 3325 527
+rect 1769 441 1783 457
+rect 1771 52 1783 77
+rect 1860 441 3325 457
+rect 1860 52 3323 77
+rect 1771 -28 3323 52
+<< ndiode >>
+rect 3242 77 3321 441
+rect 3523 -9 3608 111
+rect 4093 -3 4179 101
+<< nndiode >>
+rect -427 -28 -223 129
+<< pdiodelvt >>
+rect -350 129 -300 150
+rect 148 128 1754 552
+rect 181 -28 1754 128
+rect 3608 -26 4093 125
+rect -350 -50 -300 -28
+rect 148 -57 1754 -28
+<< rlocali >>
+rect 60 -20 90 120
+<< metal1 >>
+rect 62 1050 169 1052
+rect 62 1002 4200 1050
+rect 150 1000 4200 1002
+rect 200 720 750 980
+rect 1800 720 2350 980
+rect 200 700 2050 720
+rect 2600 700 2880 980
+rect 3550 720 4150 980
+rect 200 500 240 700
+rect 1800 500 1840 700
+rect 200 100 1700 450
+rect -400 70 -250 90
+rect 0 70 1700 100
+rect 1800 70 3300 450
+rect 3550 80 4150 680
+rect -400 50 1700 70
+rect -400 10 -250 50
+rect 0 20 140 50
+rect 0 -50 50 20
+rect 3527 -50 3559 19
+rect -400 -100 3559 -50
+rect 3527 -101 3559 -100
+<< metal2 >>
+rect 2600 700 2880 980
+<< metal3 >>
+rect 2586 686 2894 994
+<< mimcap >>
+rect 2600 700 2880 980
+<< labels >>
+rlabel space 1850 -50 1900 0 1 VINN
+port 2 n
+rlabel space 0 1000 100 1050 1 VDD
+port 3 n
+rlabel metal1 0 -100 100 -50 1 VSS
+port 4 n
+rlabel space 4150 10 4200 90 1 VOUT
+port 5 n
+rlabel metal1 250 200 300 300 1 VINP
+port 1 n
+rlabel metal1 -400 -100 0 -50 1 VSS
+port 4 n
+rlabel pdiodelvt 250 -50 300 -25 1 VINP
+port 1 n
+rlabel pdiodelvt 250 -50 300 550 1 VINP
+port 1 n
+<< end >>
